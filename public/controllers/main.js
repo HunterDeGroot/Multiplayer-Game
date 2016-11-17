@@ -32,7 +32,6 @@ mainApp.controller("EngineCtrl", function ($http) {
 
     function animate() {
         if(lock == false) {
-            console.log(basicScene.user.id)
             saveUser(basicScene.user.id,basicScene.user.mesh.position.x,basicScene.user.mesh.position.z, basicScene.user.mesh.rotation.y);
             requestAnimationFrame(animate);
             setTimeout( loadOtherPlayers(), 0, 200 );

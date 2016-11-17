@@ -13,6 +13,7 @@ app.use(bodyParser());
 app.use(express.static(path.join(__dirname, '../public/javascripts')));
 app.use(express.static(path.join(__dirname, '../public/controllers')));
 app.use(express.static(path.join(__dirname, '../public/bower_components')));
+console.log(__dirname)
 
 var mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost/hddb');
