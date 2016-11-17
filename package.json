@@ -20,5 +20,17 @@
     "cors": "^2.8.1",
     "mongoose": "^4.6.6",
     "socket.io": "^1.5.1"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HunterDeGroot/Multiplayer-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HunterDeGroot/Multiplayer-Game/issues"
+  },
+  "homepage": "https://github.com/HunterDeGroot/Multiplayer-Game#readme",
+  "description": ""
 }
