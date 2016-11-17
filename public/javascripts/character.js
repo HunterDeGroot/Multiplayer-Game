@@ -56,6 +56,7 @@ var Character = Class.extend({
         this.direction = new THREE.Vector3(0, 0, 0);
         // Set the current animation step
         this.step = 0;
+        this.kill = 0;
     },
     // Update the direction of the current motion
     setDirection: function (controls) {

@@ -34,6 +34,7 @@ var BasicScene = Class.extend({
         this.setFocus(this.user.mesh);
         // Start the events handlers
         this.setControls();
+        this.kill = false;
     },
     // Event handlers
     setControls: function () {
@@ -63,6 +64,9 @@ var BasicScene = Class.extend({
                     break;
                 case 40:
                     controls.down = true;
+                    break;
+                case 75:
+                    user.kill = true;
                     break;
                 default:
                     prevent = false;

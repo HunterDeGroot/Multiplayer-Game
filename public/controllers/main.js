@@ -18,6 +18,25 @@ mainApp.controller("EngineCtrl", function ($http) {
     basicScene = new BasicScene();
 
     function loadPlayers() {
+        console.log(basicScene.user.kill);
+        if(basicScene.user.kill == true) {
+            $http.get(url+"/kill").success(function (r) {
+                console.log(r);
+            });
+            basicScene.user.kill = false;
+            var len = ids.length;
+            for (var i = 4; i < 4+len; i++) {
+                var obj = basicScene.scene.children[i];
+                basicScene.scene.remove(obj);
+            }
+            console.log(basicScene.scene.children.length);  
+            console.log(len);
+
+            ids = [];
+            basicScene.users = [];
+            basicScene.players = [];
+        }
+
         $http.get(url).success(function (users) {
             basicScene.players = users;
         });
