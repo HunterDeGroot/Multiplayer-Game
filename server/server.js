@@ -2,12 +2,17 @@ var express = require("express");
 var app = express();
 var cors = require("cors");
 var bodyParser = require("body-parser");
+var path = require('path');
 
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 app.use(cors());
 app.use(bodyParser());
+// app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../public/javascripts')));
+app.use(express.static(path.join(__dirname, '../public/controllers')));
+app.use(express.static(path.join(__dirname, '../public/bower_components')));
 
 var mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost/hddb');
@@ -23,6 +28,12 @@ var Player = mongoose.model('Player', {playerId: Number,x: Number,y: Number,rot:
 //         console.log('saved');
 //     }
 // }));
+
+app.get("/game", function (req, res) {
+    Player.find(function (err, players) {
+        res.sendFile(path.resolve('../public/index.html'));
+    });
+});
 
 app.get("/", function (req, res) {
     Player.find(function (err, players) {
@@ -52,54 +63,6 @@ app.post("/update", function (req, res) {
     // var player = new Player({playerId: playerId, x: x, y:y});
     // player.save(function (err) {
     //     res.send();
-    // });
-});
-
-io.on('connection', function(socket) {
-    //Globals
-    // var defaultRoom = 'general';
-    // var rooms = ["General", "angular", "socket.io", "express", "node", "mongo", "PHP", "laravel"];
-    //
-    //Emit the rooms array
-    socket.on('poo', function (yup){
-        console.log("yeet");
-        poo: 'poop'
-    });
-
-    // //Listens for new user
-    // socket.on('new player', function(data) {
-    //     data.room = defaultRoom;
-    //     //New user joins the default room
-    //     socket.join(defaultRoom);
-    //     //Tell all those in the room that a new user joined
-    //     io.in(defaultRoom).emit('user joined', data);
-    // });
-
-    // //Listens for switch room
-    // socket.on('switch room', function(data) {
-    //     //Handles joining and leaving rooms
-    //     //console.log(data);
-    //     socket.leave(data.oldRoom);
-    //     socket.join(data.newRoom);
-    //     io.in(data.oldRoom).emit('user left', data);
-    //     io.in(data.newRoom).emit('user joined', data);
-    //
-    // });
-    //
-    // //Listens for a new chat message
-    // socket.on('new message', function(data) {
-    //     //Create message
-    //     var newMsg = new Chat({
-    //         username: data.username,
-    //         content: data.message,
-    //         room: data.room.toLowerCase(),
-    //         created: new Date()
-    //     });
-    //     //Save it to database
-    //     newMsg.save(function(err, msg){
-    //         //Send message to those connected in the room
-    //         io.in(msg.room).emit('message created', msg);
-    //     });
     // });
 });
 

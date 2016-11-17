@@ -143,7 +143,6 @@ var loadOtherPlayers = function () {
                 });
                 basicScene.users.push(c);
                 basicScene.scene.add(c.mesh);
-                console.log(basicScene.scene);
             } else {
                 c =  basicScene.users[ids.indexOf(player.playerId)];
             }
