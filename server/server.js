@@ -32,7 +32,7 @@ var Player = mongoose.model('Player', {playerId: Number,x: Number,y: Number,rot:
 
 app.get("/game", function (req, res) {
     Player.find(function (err, players) {
-        res.sendFile(path.resolve('../public/index.html'));
+        res.sendFile(path.resolve(path.join(__dirname, '../public/index.html')));
     });
 });
 
