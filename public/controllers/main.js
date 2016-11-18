@@ -29,7 +29,7 @@ mainApp.controller("EngineCtrl", function ($http) {
                 var obj = basicScene.scene.children[i];
                 basicScene.scene.remove(obj);
             }
-            console.log(basicScene.scene.children.length);  
+            console.log(basicScene.scene.children.length);
             console.log(len);
 
             ids = [];
