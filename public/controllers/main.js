@@ -51,7 +51,7 @@ mainApp.controller("EngineCtrl", function ($http) {
         basicScene.frame();
         saveUser(basicScene.user.id, basicScene.user.mesh.position.x, basicScene.user.mesh.position.z, basicScene.user.mesh.rotation.y);
         requestAnimationFrame(animate);
-        setTimeout(loadOtherPlayers(), 0, 10);
+        setTimeout(loadOtherPlayers(), 200);
         loadOtherPlayers();
     }
 
