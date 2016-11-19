@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, '../public/bower_components')));
 console.log(__dirname)
 
 var mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/');
+mongoose.connect('mongodb://localhost/db');
 
 var Product = mongoose.model('Product', {name: String});
 var Player = mongoose.model('Player', {playerId: Number,x: Number,y: Number,rot: Number});

@@ -2,7 +2,7 @@ var mainApp = angular.module("mainApp", []);
 
 mainApp.controller("MainCtrl", function ($http) {
     var app = this;
-    var url = "http://localhost:3000";
+    var url = "http://104.236.118.111:3000";
 
     app.saveProduct = function (newProduct) {
         $http.post(url + "/add", {name:newProduct}).success(function () {
@@ -12,7 +12,7 @@ mainApp.controller("MainCtrl", function ($http) {
 
 mainApp.controller("EngineCtrl", function ($http) {
 
-    var url = "http://localhost:3000";
+    var url = "http://104.236.118.111:3000";
 
     var lock = false;
     basicScene = new BasicScene();
