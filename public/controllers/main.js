@@ -39,7 +39,7 @@ mainApp.controller("EngineCtrl", function ($http) {
                 $http.get(url + "/kill").success(function (r) {
                     basicScene.user.kill = false;
                     var len = ids.length;
-                    for (var i = 4; i < 4 + len; i++) {
+                    for (var i = 3; i < 3 + len; i++) {
                         var obj = basicScene.scene.children[i];
                         basicScene.scene.remove(obj);
                     }
