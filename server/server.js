@@ -21,7 +21,7 @@ var Player = mongoose.model('Player', {playerId: Number,x: Number,y: Number,rot:
 
 app.get("/kill", function (req, res) {
     Player.remove(function(err,removed) {
-        return res.send();
+        res.send();
     });
 });
 
