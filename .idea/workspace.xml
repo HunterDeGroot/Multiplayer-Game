@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -403,12 +403,12 @@
       <workItem from="1479366508738" duration="7999000" />
       <workItem from="1479434251896" duration="4438000" />
       <workItem from="1479440719220" duration="915000" />
-      <workItem from="1479595633947" duration="8297000" />
+      <workItem from="1479595633947" duration="8646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78604000" />
+    <option name="totallyTimeSpent" value="78953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,7 +834,7 @@
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
