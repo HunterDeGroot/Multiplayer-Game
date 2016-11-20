@@ -19,6 +19,7 @@ var BasicScene = Class.extend({
         this.user = new Character({
             color: 0x7A43B6
         });
+        this.players = [];
         this.users = [];
         this.scene.add(this.user.mesh);
         // Create the "world" : a 3D representation of the place we'll be putting our character in
