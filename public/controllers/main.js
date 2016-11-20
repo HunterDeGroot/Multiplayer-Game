@@ -64,10 +64,10 @@ mainApp.controller("EngineCtrl", function ($http) {
 
     function animate() {
         basicScene.frame();
-        setTimeout(loadPlayers(), 200);
+        loadPlayers();
         setTimeout(checkKill(), 200);
-        setTimeout(saveUser(basicScene.user.id, basicScene.user.mesh.position.x, basicScene.user.mesh.position.z, basicScene.user.mesh.rotation.y),200);
-        setTimeout(loadOtherPlayers(), 200);
+        saveUser(basicScene.user.id, basicScene.user.mesh.position.x, basicScene.user.mesh.position.z, basicScene.user.mesh.rotation.y);
+        loadOtherPlayers();
         requestAnimationFrame(animate);
     }
 
