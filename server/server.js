@@ -20,7 +20,7 @@ mongoose.connect('mongodb://104.236.118.111/db');
 var Player = mongoose.model('Player', {playerId: Number,x: Number,y: Number,rot: Number});
 
 app.get("/kill", function (req, res) {
-    Player.remove({}).execute();
+    Player.find().remove({}).execute();
     res.send();
 });
 
