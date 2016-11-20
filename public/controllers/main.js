@@ -36,7 +36,7 @@ mainApp.controller("EngineCtrl", function ($http) {
 
             if(!killLock) {
                 killLock = true;
-                $http.post(url + "/kill","").success(function (r) {
+                $http.get(url + "/kill").success(function (r) {
                     basicScene.user.kill = false;
                     var len = ids.length;
                     for (var i = 4; i < 4 + len; i++) {
